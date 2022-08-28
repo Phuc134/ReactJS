@@ -1,15 +1,23 @@
 import logo from './logo.svg';
-import './App.css';
 import Header from './components/Header/Header';
-
-
+import { Link, Outlet } from 'react-router-dom';
+import './App.scss';
 
 const App = () => {
 
   return (
 
     <div className="app-container">
-      <Header />
+      <div className="header-container">
+        <Header />
+      </div>
+      <div className="main-container">
+        <div clasName="sidenav-container"></div>
+        <div className-="app-content">
+          <Outlet />
+
+        </div>
+      </div>
     </div>
   );
 
